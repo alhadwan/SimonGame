@@ -11,7 +11,7 @@ CSS3
 
 📸 Screenshots:
 
-
+https://github.com/alhadwan/jQary-simon-game/blob/main/simonGame.png
 
 
 📖 Features
