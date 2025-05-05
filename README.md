@@ -1,6 +1,8 @@
 # SimonGame
 A classic Simon Says memory game built using JavaScript, jQuery, HTML, and CSS.
 
+Live Demo: https://alhadwan.github.io/SimonGame/
+
 # Tech Stack:
 JavaScript (ES6)
 jQuery
