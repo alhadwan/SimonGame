@@ -1,5 +1,5 @@
 # SimonGame
-A classic Simon Says memory game built using JavaScript, jQuery, HTML, and CSS.
+A classic Simon memory game where players win each level by following complex pattern of flashing colors. The Game built using JavaScript, jQuery, HTML, and CSS.
 
 Live Demo: https://alhadwan.github.io/SimonGame/
 
@@ -11,12 +11,14 @@ CSS3
 
 # Features
 - Interactive memory game with increasing difficulty
-- Audio & visual feedback for correct/incorrect sequences
 - Uses jQuery for smooth animations and DOM updates
+- Sound and flash for each button pressed
+- Game-over screen
 
 # How To Play
 - Press any key in the keyboard to start the game
-- Follow the feded button for each level
+- Follow the feded button to win each levels
+- Press any key to restart
 
 # How to Run Locally
 1. git clone https://github.com/alhadwan/simon-game.git
