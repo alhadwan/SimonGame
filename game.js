@@ -1,29 +1,21 @@
-//$("h1").css("color", "black");
-//make a simon game: which follow the color flashing 
+
+// store color randomly
 var gamePattern = [];
 var userClickedPattern = [];
 var buttonColours = ["red", "blue", "green", "yellow"];
 var level = 0;
 var gameStart = false;
 
+// to click in the color to follow the pattern
 $(".btn").click(function(){
-    // alert("Button clicked!");
-
-    var userChosenColour = $(this).attr("id"); ;
-    // console.log(userChosenColour);
+    var userChosenColour = $(this).attr("id");
     userClickedPattern.push(userChosenColour); 
-    // console.log(userClickedPattern);
-    // removedPressed = $(this).addClass("pressed");
-
-    // setTimeout(function(){
-    //     removedPressed.removeClass('pressed');
-        
-    // }, 50);
     animatePress(userChosenColour);
     playSound(userChosenColour);
     checkAnswer(userClickedPattern.length-1);
  })
 
+ // press on any key to start the game
   $(document).keydown (function() {
     if(!gameStart){
     $("#level-title").text("Level " + level);
@@ -41,21 +33,19 @@ function nextSequence(){
     var randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);  
     $("#" + randomChosenColour).fadeOut(100).fadeIn(100);
-    // var audio = new Audio("./sounds/" + randomChosenColour + ".mp3");
-    // audio.play();
-   // console.log(randomChosenColour);
+    
    playSound(randomChosenColour);
 }
-//nextSequence();
 
+// to play a sound for a choosing colore
 function playSound(name){
     var audio = new Audio("./sounds/" + name + ".mp3");
     audio.play();
 }
 
+// to animate the color that the user presed for 100ms and than remove it. 
 function animatePress(currentColour){
     
-       
       $("#" + currentColour ).addClass("pressed");
     
         setTimeout(function(){
@@ -63,6 +53,7 @@ function animatePress(currentColour){
             
         }, 100);
 }
+
 
 function checkAnswer(currentLevel){
     if(gamePattern[currentLevel] === userClickedPattern[currentLevel]){
